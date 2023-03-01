@@ -1,5 +1,5 @@
 export const App = () => (
     <div>
-        App
+        Apps
     </div>
 );
