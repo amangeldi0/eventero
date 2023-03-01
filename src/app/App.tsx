@@ -1,7 +1,7 @@
 import { RoutePovider } from './providers/RoutePovider';
 
 export const App = () => (
-    <div>
+    <div className="app">
         <RoutePovider />
     </div>
 );

@@ -1,6 +1,8 @@
+import Button from '@/shared/ui/Button/Button';
+
 const MainPage = () => (
     <div>
-        Main Page
+        <Button>Main</Button>
     </div>
 );
 

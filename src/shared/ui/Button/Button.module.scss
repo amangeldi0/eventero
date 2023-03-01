@@ -1,0 +1,35 @@
+.button {
+    margin: 50px;
+    padding: 4px 17px;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    border-radius: 4px;
+    transition: transform .3s ease-out, background .3s ease-out, color .3s ease-out,box-shadow .3s ease-out;
+    border: 1px solid transparent;
+
+    &:hover {
+        background: rgb(0 0 0 / 3.5%);
+    }
+}
+
+.clear {
+    border: none;
+    color: var(--active-color);
+}
+
+.contain {
+    background: var(--active-color);
+    border: 1px solid var(--active-color);
+    color: white;
+
+    &:hover {
+        background: var(--second-hover);
+        box-shadow: rgb(0 0 0 / 20%) 0 2px 4px -1px, rgb(0 0 0 / 14%) 0 4px 5px 0, rgb(0 0 0 / 12%) 0 1px 10px 0;
+    }
+}
+
+.outline {
+    color: var(--active-color);
+    border: 1px solid var(--active-color);
+}
