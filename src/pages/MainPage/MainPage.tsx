@@ -1,5 +1,11 @@
+import { LogoIcon } from '@/shared/assets/LogoIcon';
+
 const MainPage = () => (
-    <div />
+    <div>
+        <LogoIcon />
+        Main Page
+    </div>
+
 );
 
 export default MainPage;

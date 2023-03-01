@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { SingIn, SingUp } from '@/widgets/Auth';
 
-const AuthPageAsync = () => {
+const AuthPage = () => {
     const [authState, setAuthState] = useState<boolean>(false);
 
     return (
@@ -16,4 +16,4 @@ const AuthPageAsync = () => {
     );
 };
 
-export default AuthPageAsync;
+export default AuthPage;
