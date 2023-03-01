@@ -1,5 +1,7 @@
+import { RoutePovider } from './providers/RoutePovider';
+
 export const App = () => (
     <div>
-        App
+        <RoutePovider />
     </div>
 );
