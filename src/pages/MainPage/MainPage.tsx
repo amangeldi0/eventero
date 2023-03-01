@@ -5,6 +5,7 @@ const MainPage = () => (
         <LogoIcon />
         Main Page
     </div>
+
 );
 
 export default MainPage;
