@@ -1,6 +1,6 @@
 type Mods = Record<string, boolean | string>
 
-export function classNames(
+export function classnames(
     cls: string,
     mods: Mods = {},
     additional: string[] = [],

@@ -1,2 +1,9 @@
 @import "reset";
 @import "variabless";
+
+.app {
+    font: var(--font-m);
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    min-height: 100vh;
+}
