@@ -1,8 +1,9 @@
-import Button from '@/shared/ui/Button/Button';
+import { LogoIcon } from '@/shared/assets/LogoIcon';
 
 const MainPage = () => (
     <div>
-        <Button>Main</Button>
+        <LogoIcon />
+        Main Page
     </div>
 );
 

@@ -1,9 +1,5 @@
-import { Auth } from '@/widgets/Auth/Auth';
-
 const AuthPageAsync = () => (
-    <div>
-        <Auth />
-    </div>
+    <div />
 );
 
 export default AuthPageAsync;
