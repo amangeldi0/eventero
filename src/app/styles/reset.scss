@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 input,
@@ -19,4 +18,9 @@ a {
 
 li {
     list-style: none;
+}
+
+button{
+    background-color: transparent;
+    border: none;
 }
