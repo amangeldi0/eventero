@@ -5,9 +5,8 @@ import cls from './MainPage.module.scss';
 
 const MainPage = () => (
     <div className={cls.main}>
-        <FastSearch/>
+        <FastSearch />
         <Sidebar />
-
     </div>
 
 );
