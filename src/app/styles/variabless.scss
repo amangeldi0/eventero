@@ -18,7 +18,7 @@
     --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
 
     // sizes
-    --navbar-height: 60px;
+    --navbar-height: 80px;
     --sidebar-width: 1px;
     --sidebar-width-collapsed: 1px;
 
@@ -27,5 +27,6 @@
     --secondary-color: #000;
     --active-color: #2905c2;
     --hover-color: rgb(0 0 0 / 3.5%);
-    --second-hover: rgb(41 5 194 / 83%)
+    --second-hover: rgb(41 5 194 / 83%);
+    --error-collor: #fd7171;
 }
