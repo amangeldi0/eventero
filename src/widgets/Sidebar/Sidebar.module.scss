@@ -1,0 +1,38 @@
+.sidebar {
+    width: var(--sidebar-width);
+    background: grey;
+    height: calc(100vh - var(--navbar-height));
+    position: relative;
+    transform: translateX(0);
+    transition: transform .4s ease-in-out;
+}
+
+.close {
+    top: 45%;
+    right: -23px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 22px;
+    background: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.closeIcon {
+    height: 20px;
+    width: 20px;
+    color: var(--active-color);
+    transform: rotate(180deg);
+
+}
+
+.collapsedIcon {
+    transform: rotate(0deg);
+}
+
+.collapsed {
+    transform: translateX(-100%);
+}
