@@ -1,0 +1,80 @@
+.layout{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.MainFilter{
+    width: 100%;
+    display: flex;
+}
+
+.MainFilterChild{
+    padding: 0 5px;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--active-color);
+
+    button {
+        transition: all .3s ease-out;
+    }
+
+    &:hover{
+        button{
+            flex-grow: 1;
+            box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+            transform: translateY(-2px);
+        }
+    }
+
+    &:last-child{
+        border: none;
+    }
+}
+
+.AdditionalFilter{
+    width: 100%;
+    height: 15em;
+    display: none;
+    flex-flow: column wrap;
+    box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+}
+
+.AdditionalFilterChild{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    height: 50px;
+
+    .AdditionalFilterButton{
+        position: relative;
+    }
+
+    button::after{
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: var(--active-color);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: scale(0);
+        transition: all .3s ease-out;
+    }
+
+    &:hover{
+        button::after{
+            transform: scale(1);
+        }
+    }
+}
+
+.active{
+    display: flex;
+}

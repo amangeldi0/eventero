@@ -1,6 +1,8 @@
+import { FastSearch } from '@/features/FastSearch/FastSearch';
+
 const MainPage = () => (
     <div>
-        Main Page
+        <FastSearch />
     </div>
 
 );
