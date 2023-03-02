@@ -1,6 +1,8 @@
+import { EventCard } from '@/features/EventCard/EventCard';
+
 const MainPage = () => (
     <div>
-        Main Page
+        <EventCard />
     </div>
 
 );
