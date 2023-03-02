@@ -32,10 +32,7 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        'max-len': ['error', {
-            ignoreComments: true,
-            code: 100,
-        }],
+        'max-len': "off",
 
         'simple-import-sort/exports': 1,
         'simple-import-sort/imports': [
@@ -57,6 +54,7 @@ module.exports = {
                 ]
             }
         ],
+
         'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
     },
