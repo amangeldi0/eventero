@@ -12,7 +12,7 @@ export const Navbar: FC = () => {
     const jwt = localStorage.getItem('jwt');
     console.log(jwt);
     return (
-        <div className={classnames(cls.Navbar, {}, [])}>
+        <div className={cls.Navbar}>
             <Link to="/"><LogoIcon /></Link>
             {
                 location?.pathname === '/auth'
@@ -35,5 +35,3 @@ export const Navbar: FC = () => {
         </div>
     );
 };
-
-export default Navbar;
