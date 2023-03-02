@@ -1,8 +1,10 @@
-import { EventCard } from '@/features/EventCard/EventCard';
+import { Sidebar } from '@/widgets/Sidebar/Sidebar';
+
+import cls from './MainPage.module.scss';
 
 const MainPage = () => (
-    <div>
-        <EventCard />
+    <div className={cls.main}>
+        <Sidebar />
     </div>
 
 );
