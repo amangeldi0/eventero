@@ -10,7 +10,7 @@ import cls from './Navbar.module.scss';
 export const Navbar: FC = () => {
     const location = useLocation();
     const jwt = localStorage.getItem('jwt');
-
+    console.log(jwt);
     return (
         <Layout className={cls.layout}>
             <div className={cls.Navbar}>
