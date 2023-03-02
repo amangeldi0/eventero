@@ -71,8 +71,12 @@
 }
 
 .theme{
-    @extend .price;
-
+    position: absolute;
+    bottom: 15px;
+    color: white;
+    cursor: pointer;
+    font: var(--font-l);
+    font-weight: 600;
     left: 15px;
 }
 
