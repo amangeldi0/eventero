@@ -122,7 +122,7 @@ export const SingUp:FC<SingUpProps> = ({ setAuthState }) => {
 
                 <div className={cls.field}>
                     <input
-                        type="text"
+                        type="password"
                         {...register('password', passwordSchema)}
                         className={
                             classnames(
@@ -140,7 +140,7 @@ export const SingUp:FC<SingUpProps> = ({ setAuthState }) => {
 
                 <div className={cls.field}>
                     <input
-                        type="text"
+                        type="password"
                         {...register('confirmPassword', passwordSchema)}
                         className={
                             classnames(

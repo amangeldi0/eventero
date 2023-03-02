@@ -1,0 +1,8 @@
+.auth{
+    width: 100%;
+    height: calc(100vh - var(--navbar-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f4f4;
+}
