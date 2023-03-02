@@ -1,8 +1,13 @@
 import { FastSearch } from '@/features/FastSearch/FastSearch';
+import { Sidebar } from '@/widgets/Sidebar/Sidebar';
+
+import cls from './MainPage.module.scss';
 
 const MainPage = () => (
-    <div>
-        <FastSearch />
+    <div className={cls.main}>
+        <FastSearch/>
+        <Sidebar />
+
     </div>
 
 );

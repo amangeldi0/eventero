@@ -1,6 +1,6 @@
 :root {
     // typography
-    --font-family-main: consolas, "Times New Roman", serif;
+    --font-family-main: 'Poppins', sans-serif;
     --font-size-s: 12px;
     --font-line-s: 20px;
     --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
@@ -19,8 +19,7 @@
 
     // sizes
     --navbar-height: 80px;
-    --sidebar-width: 1px;
-    --sidebar-width-collapsed: 1px;
+    --sidebar-width: 340px;
 
     // colors
     --primary-color: #fff;
