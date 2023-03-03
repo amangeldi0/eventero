@@ -12,25 +12,27 @@ export const Navbar: FC = () => {
     const location = useLocation();
     const jwt = localStorage.getItem('jwt');
     return (
-        <Layout className={cls.layout}>
-            <div className={cls.Navbar}>
-                <Link to="/"><LogoIcon /></Link>
-                {
-                    location.pathname === '/auth' ? ''
-                        : (
-                            <div>
-                                {
-                                    jwt === null ? (
-                                        <AuthLink />
-                                    ) : (
-                                        <User className={cls.userButton} />
-                                    )
-                                }
-                            </div>
-                        )
-                }
+        <div className={cls.shadow}>
+            <Layout className={cls.layout}>
+                <div className={cls.Navbar}>
+                    <Link to="/"><LogoIcon className={cls.LogoIcon} /></Link>
+                    {
+                        location.pathname === '/auth' ? ''
+                            : (
+                                <div>
+                                    {
+                                        jwt === null ? (
+                                            <AuthLink />
+                                        ) : (
+                                            <User className={cls.userButton} />
+                                        )
+                                    }
+                                </div>
+                            )
+                    }
 
-            </div>
-        </Layout>
+                </div>
+            </Layout>
+        </div>
     );
 };
