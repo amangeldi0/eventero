@@ -1,17 +1,7 @@
-@keyframes hearts {
-    from {
-        fill: none;
-    }
-
-    to{
-        fill: var(--active-color);
-    }
-}
-
 .eventCard {
     margin: 50px;
     width: 320px;
-    height: auto;
+    height: 350px;
     position: relative;
     border-radius: 15px;
     overflow: hidden;
