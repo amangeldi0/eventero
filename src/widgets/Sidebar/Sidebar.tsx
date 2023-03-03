@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 
 import { ArrowIcon } from '@/shared/assets/ArrowIcon';
 import { classnames } from '@/shared/helpers/classnames';
+import { SidebarContent } from '@/widgets/Sidebar/ui/SidebarContent';
 
 import cls from './Sidebar.module.scss';
 
@@ -32,6 +33,9 @@ export const Sidebar:FC<SidebarProps> = ({ className }) => {
                     )}
                 />
             </button>
+            <div className={cls.sidebarContainer}>
+                <SidebarContent />
+            </div>
         </div>
     );
 };
