@@ -54,6 +54,7 @@
     position: absolute;
     background-color: var(--primary-color);
     bottom: -16em;
+    z-index: 10;
 }
 
 .AdditionalFilterChild{
@@ -62,6 +63,7 @@
     justify-content: center;
     flex-grow: 1;
     height: 50px;
+
 
     .AdditionalFilterButton{
         position: relative;

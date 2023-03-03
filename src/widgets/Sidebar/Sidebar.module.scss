@@ -1,7 +1,7 @@
 .sidebar {
     width: var(--sidebar-width);
-    background: white;
-    height: calc(100vh - var(--navbar-height));
+    background: transparent;
+    height: calc((100vh - var(--navbar-height)) - (var(--navbar-height) - 20px));
     position: relative;
     transform: translateX(0);
     transition: transform .4s ease-in-out;
