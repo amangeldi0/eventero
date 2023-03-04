@@ -1,8 +1,8 @@
 .sidebar {
     width: var(--sidebar-width);
-    background: var(--primary-color);
-    height: calc(100vh - var(--navbar-height));
-    position: relative;
+    background: transparent;
+    height: calc((100vh - var(--navbar-height)) - (var(--navbar-height) - 20px));
+    position: fixed;
     transform: translateX(0);
     transition: transform .4s ease-in-out;
     box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
