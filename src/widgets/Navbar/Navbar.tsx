@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+import { SearchBar } from '@/features/SearchBar/SearchBar';
 import { LogoIcon } from '@/shared/assets/LogoIcon';
 import { Layout } from '@/shared/ui/Layout/Layout';
 import { AuthLink } from '@/widgets/Navbar/ui/AuthLink';
@@ -16,6 +17,7 @@ export const Navbar: FC = () => {
             <Layout className={cls.layout}>
                 <div className={cls.Navbar}>
                     <Link to="/"><LogoIcon className={cls.LogoIcon} /></Link>
+                    <SearchBar />
                     {
                         location.pathname === '/auth' ? ''
                             : (

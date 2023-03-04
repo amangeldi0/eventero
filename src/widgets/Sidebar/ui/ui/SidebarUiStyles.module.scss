@@ -4,6 +4,19 @@
     border-top: 1px solid #ddd;
 }
 
+.arrow {
+    width: 18px;
+    height: 18px;
+    transform: rotate(90deg);
+    transition: transform .3s ease-in;
+}
+
+.arrowHide {
+    width: 18px;
+    height: 18px;
+    transform: rotate(-90deg);
+}
+
 .radio{
     display: flex;
     align-items: start;

@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 
-import { ArrowIcon } from '@/shared/assets/ArrowIcon';
+import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 import { classnames } from '@/shared/helpers/classnames';
 import { SidebarContent } from '@/widgets/Sidebar/ui/SidebarContent';
 
@@ -26,7 +26,7 @@ export const Sidebar:FC<SidebarProps> = ({ className }) => {
                 className={cls.close}
                 onClick={() => setCollapsed((prevState) => !prevState)}
             >
-                <ArrowIcon
+                <ChevronLeftIcon
                     className={classnames(
                         cls.closeIcon,
                         { [cls.collapsedIcon]: collapsed },
