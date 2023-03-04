@@ -3,6 +3,7 @@ import { FC, useRef, useState } from 'react';
 import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 import { classnames } from '@/shared/helpers/classnames';
 import { useClickOutside } from '@/shared/hooks/useClickOutside';
+import { Layout } from '@/shared/ui/Layout/Layout';
 
 import cls from './FastSearc.module.scss';
 
@@ -21,21 +22,42 @@ export const FastSearch:FC = () => {
 
     return (
         <div className={cls.shadow}>
-            <div className={cls.layout}>
-                <div className={cls.MainFilter}>
+            <Layout
+                className={cls.layout}
+            >
+                <div
+                    className={cls.MainFilter}
+                >
                     {mainChoices
                         .map((choice, index) => (
-                        // eslint-disable-next-line react/no-array-index-key
-                            <div key={index} className={cls.MainFilterChild}>
-                                <button type="button">{choice}</button>
+
+                            <div
+                                // eslint-disable-next-line react/no-array-index-key
+                                key={index}
+                                className={cls.MainFilterChild}
+                            >
+                                <button
+                                    type="button"
+                                >
+                                    {choice}
+                                </button>
                             </div>
                         ))}
-                    <div className={cls.MainFilterChild}>
-                        <button type="button">ВСЕ</button>
+                    <div
+                        className={cls.MainFilterChild}
+                    >
+                        <button
+                            type="button"
+                        >
+                            ВСЕ
+                        </button>
                     </div>
                     {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
                     <div className={cls.MainFilterChild} ref={ref}>
-                        <button type="button" onClick={handleClick}>
+                        <button
+                            type="button"
+                            onClick={handleClick}
+                        >
                             <ChevronLeftIcon
                                 className={
                                     classnames(
@@ -73,7 +95,7 @@ export const FastSearch:FC = () => {
                             </div>
                         ))}
                 </div>
-            </div>
+            </Layout>
         </div>
 
     );
