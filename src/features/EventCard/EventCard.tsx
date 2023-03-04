@@ -1,4 +1,7 @@
+
 import { HeartIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
+
 import example from '@/shared/assets/example.jpeg';
 
 import cls from './EventCard.module.scss';
