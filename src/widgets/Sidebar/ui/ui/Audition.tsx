@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 import { classnames } from '@/shared/helpers/classnames';
 
 import cls from './SidebarUiStyles.module.scss';
@@ -27,6 +28,11 @@ export const Audition = () => {
 
             >
                 Аудитория:
+                <ChevronLeftIcon
+                    className={
+                        classnames(cls.arrow, { [cls.arrowHide]: !show })
+                    }
+                />
             </button>
             <div className={classnames(cls.radio, { [cls.hide]: !show })}>
                 <div className={cls.type}>

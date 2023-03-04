@@ -1,5 +1,5 @@
+import { HeartIcon } from '@heroicons/react/24/outline';
 import example from '@/shared/assets/example.jpeg';
-import { HeroIcon } from '@/shared/assets/HeroIcon';
 
 import cls from './EventCard.module.scss';
 
@@ -12,7 +12,7 @@ export const EventCard = () => {
                 <div className={cls.price}>Free</div>
             </div>
             <div className={cls.saveButton}>
-                <HeroIcon className={cls.heart} />
+                <HeartIcon className={cls.heart} />
             </div>
             <div className={cls.eventInfo}>
                 <div className={cls.title}>
