@@ -12,9 +12,13 @@ export const Dropdown:FC<DropdownProps> = (props) => {
         children,
         className,
     } = props;
-    console.log(children);
+
     return (
-        <div className={classnames(cls.Drop, {}, [className!])}>
+        <div
+            className={
+                classnames(cls.Drop, {}, [className!])
+            }
+        >
             {children.map(
                 (child, index) => (
                     // eslint-disable-next-line react/no-array-index-key
