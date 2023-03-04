@@ -27,13 +27,18 @@
     }
 }
 
-.eventInfo{
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 7px;
+.price{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: var(--active-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+    font: var(--font-sm);
+    font-weight: 600;
 }
 
 .saveButton{
@@ -58,6 +63,15 @@
     &:hover {
         fill: var(--active-color);
     }
+}
+
+.eventInfo{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 7px;
 }
 
 .title {
@@ -87,20 +101,6 @@
     background: linear-gradient(to top, rgb(255 255 255 / 100%) , rgb(255 255 255 / 10%));
     bottom: 0;
     right: 0;
-}
-
-.price{
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    padding: 3px 10px;
-    border-radius: 5px;
-    text-align: center;
-    color: var(--active-color);
-    background-color: var(--primary-color);
-    cursor: pointer;
-    font: var(--font-sm);
-    font-weight: 600;
 }
 
 .addition {

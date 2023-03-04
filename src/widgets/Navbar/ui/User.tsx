@@ -23,8 +23,22 @@ export const User:FC<ComponentPropsWithRef<'div'>> = () => {
     return (
         <div className={cls.User} ref={ref}>
             {/* eslint-disable-next-line */}
-            <button type="button" className={cls.userButton} onClick={handleClick}><UserCircleIcon /></button>
-            <Dropdown className={classnames(cls.dropdown, { [cls.active]: active }, [])}>
+            <button
+                type="button"
+                className={cls.userButton}
+                onClick={handleClick}
+            >
+                <UserCircleIcon />
+            </button>
+            <Dropdown
+                className={
+                    classnames(
+                        cls.dropdown,
+                        { [cls.active]: active },
+                        [],
+                    )
+                }
+            >
                 <Link to="/favorites">Favorites</Link>
                 <Link to="/settings">Settings</Link>
                 <button type="button">Log out</button>
