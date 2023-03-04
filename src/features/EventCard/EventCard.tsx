@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import example from '@/shared/assets/example.jpeg';
 import { HeroIcon } from '@/shared/assets/HeroIcon';
 
