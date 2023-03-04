@@ -7,6 +7,12 @@
     overflow: hidden;
     box-shadow: rgb(50 50 93 / 25%) 0 6px 12px -2px, rgb(0 0 0 / 30%) 0 3px 7px -3px;
     background-color: var(--primary-color);
+    transition: all .3s ease-out;
+    cursor: pointer;
+
+    &:hover{
+        transform: translateY(-10px);
+    }
 }
 
 .eventImage{
