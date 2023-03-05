@@ -11,7 +11,6 @@ const MainPage = () => (
         <div className={cls.mainContainer}>
             <Sidebar />
             <div className={cls.eventsContainer}>
-                <SearchBar />
                 <div className={cls.eventsLayout}>
                     <EventCard />
                     <EventCard />
