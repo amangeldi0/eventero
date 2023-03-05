@@ -6,16 +6,35 @@
 
 .mainContainer{
     display: flex;
+    width: 100%;
+}
+
+.e{
+    width: calc(100% - var(--sidebar-width));
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.title{
+    margin-top: 30px;
+    font-size: 30px;
+    margin-left: 50px;
+    margin-bottom: -5px;
+    font-weight: 600;
+    transition: color .2s ease-in-out;
+    cursor: pointer;
+
+    &:hover{
+        color: var(--active-color);
+    }
 }
 
 .eventsContainer{
-    margin-top: var(--navbar-height);
     display: flex;
     flex-grow: 1;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    min-width: 0;
 }
+
 
 .eventsLayout{
     display: grid;
