@@ -4,6 +4,10 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { App } from '@/app/App';
 
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+
 import '@/app/styles/index.scss';
 
 const rootElement = document.getElementById('root');
