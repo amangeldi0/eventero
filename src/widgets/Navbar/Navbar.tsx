@@ -16,8 +16,11 @@ export const Navbar: FC = () => {
         <div className={cls.shadow}>
             <Layout className={cls.layout}>
                 <div className={cls.Navbar}>
-                    <Link to="/"><LogoIcon className={cls.LogoIcon} /></Link>
-                    <SearchBar />
+                    <Link to="/">
+                        <LogoIcon className={cls.LogoIcon} />
+                    </Link>
+                    {location.pathname === '/auth'
+                        ? '' : <SearchBar />}
                     {
                         location.pathname === '/auth' ? ''
                             : (
@@ -26,7 +29,11 @@ export const Navbar: FC = () => {
                                         jwt === null ? (
                                             <AuthLink />
                                         ) : (
-                                            <User className={cls.userButton} />
+                                            <User
+                                                className={
+                                                    cls.userButton
+                                                }
+                                            />
                                         )
                                     }
                                 </div>

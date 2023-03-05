@@ -15,5 +15,5 @@ export const EventPage = () => {
                 <Information />
             </div>
         </div>
-    );
-};
+    </div>
+);

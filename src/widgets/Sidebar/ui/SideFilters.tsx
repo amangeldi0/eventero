@@ -1,15 +1,21 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 
 import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 import { classnames } from '@/shared/helpers/classnames';
 
-import cls from './SidebarUiStyles.module.scss';
+import cls from './SideFilters.module.scss';
 
-export const Age = () => {
+interface SideFiltersProps {
+    filters: string[];
+    collapse: boolean;
+    title: string;
+}
+
+export const SideFilters: FC<SideFiltersProps> = (
+    { filters, collapse, title },
+) => {
     const [active, setActive] = useState<string>('');
     const [show, setShow] = useState<boolean>(true);
-
-    const age: string[] = ['21+', '18+', '16+', 'Без ограничений'];
 
     const onToggle = (age: string) => {
         if (age === active) {
@@ -18,33 +24,35 @@ export const Age = () => {
             setActive(age);
         }
     };
-    return (
-        <div className={cls.radioContainer}>
-            <button
-                type="button"
-                className={cls.title}
-                onClick={() => setShow((prevState) => !prevState)}
 
+    return (
+        <div className={cls.ratio}>
+            <div
+                role="presentation"
+                className={classnames(cls.ratioTitle, { [cls.ratioTitleClose]: collapse })}
+                onClick={() => setShow((prevState) => !prevState)}
             >
-                Возраст:
+                {title}
+                :
                 <ChevronLeftIcon
                     className={
                         classnames(cls.arrow, { [cls.arrowHide]: !show })
                     }
                 />
-            </button>
+            </div>
             <div className={classnames(cls.radio, { [cls.hide]: !show })}>
                 <div className={cls.type}>
                     {
-                        age.map((ag: string) => (
+                        filters.map((arg: string) => (
                             <button
                                 type="button"
-                                onClick={() => onToggle(ag)}
+                                onClick={() => onToggle(arg)}
+                                key={arg}
                                 className={
-                                    classnames(cls.value, { [cls.active]: active === ag })
+                                    classnames(cls.value, { [cls.active]: active === arg })
                                 }
                             >
-                                {ag}
+                                {arg}
                             </button>
                         ))
                     }

@@ -30,16 +30,27 @@
 
 }
 
-.error{
-    font: var(--font-s);
-    margin-left: 5px;
-    color: #fd7171;
+.fieldEye{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
+
+.icon {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    left: 10px;
+}
+
+
 
 .input{
     width: 380px;
     height: 38px;
-    padding: 3px 12px;
+    padding: 3px 35px ;
     outline: none;
     border-radius: 4px;
     border: 1px solid var(--active-color);
@@ -50,17 +61,32 @@
     }
 }
 
-.button{
-    width: 380px;
-    height: 38px;
-}
-
 .lineError {
     border: 1px solid var(--error-collor);
 
     &:focus {
         outline: 1px solid var(--error-collor);
     }
+}
+
+.fieldEyeIcon{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.error{
+    font: var(--font-s);
+    margin-left: 5px;
+    color: #fd7171;
+}
+
+.button{
+    width: 380px;
+    height: 38px;
 }
 
 .link {
@@ -78,4 +104,13 @@
         font-weight: 600;
         cursor: pointer;
     }
+}
+
+.linkWithoutBorder {
+    @extend .link;
+
+    height: 10px;
+    gap: 0;
+    margin-top: 0;
+    border: none;
 }

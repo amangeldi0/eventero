@@ -21,7 +21,7 @@ const patternPhone = {
 
 };
 
-const required = {
+export const required = {
     value: true,
     message: 'Обязательное поле',
 };

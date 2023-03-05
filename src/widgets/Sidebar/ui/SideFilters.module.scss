@@ -1,10 +1,27 @@
-
-
-.radioContainer{
+.ratio{
     border-top: 1px solid #ddd;
+    width: 100%;
 }
 
+.ratioTitle{
+    font: var(--font-l);
+    color: var(--secondary-color);
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding:5px 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: font-size .3s ease-in;
+}
+
+.ratioTitleClose{
+    font-size: 0;
+}
+
+
 .arrow {
+    margin-top: 5px;
     width: 18px;
     height: 18px;
     transform: rotate(90deg);
@@ -12,9 +29,17 @@
 }
 
 .arrowHide {
-    width: 18px;
-    height: 18px;
     transform: rotate(-90deg);
+}
+
+.type{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 80%;
+    gap: 7px;
 }
 
 .radio{
@@ -24,13 +49,15 @@
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    padding: 5px;
     max-height: 200px;
     overflow-y: auto;
+    overflow-x: hidden;
+    padding: 5px 0 10px;
     transition: all .3s ease-in-out;
 
     &::-webkit-scrollbar {
-        width: 6px;
+        width: 4px;
+
     }
 
     &::-webkit-scrollbar-track {
@@ -42,26 +69,6 @@
         background: #ccc;
         border-radius: 5px;
     }
-}
-
-.title{
-    font: var(--font-l);
-    color: var(--secondary-color);
-    padding:5px 10px;
-    width: 100%;
-    text-align: start;
-    cursor: pointer;
-
-}
-
-.type{
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: column;
-    margin-left: 20px;
-    width: 70%;
-    gap: 7px;
 }
 
 .hide{

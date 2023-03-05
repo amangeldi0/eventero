@@ -7,9 +7,7 @@ import cls from './SearchBar.module.scss';
 export const SearchBar = () => (
 
     <div className={cls.inputContainer}>
-        <div className={cls.searchIcon}>
-            <MagnifyingGlassIcon className={cls.searchIcon} />
-        </div>
+        <MagnifyingGlassIcon className={cls.searchIcon} />
         <input />
     </div>
 

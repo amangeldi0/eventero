@@ -1,6 +1,5 @@
 import { EventCard } from '@/features/EventCard/EventCard';
 import { FastSearch } from '@/features/FastSearch/FastSearch';
-import { SearchBar } from '@/features/SearchBar/SearchBar';
 import { Sidebar } from '@/widgets/Sidebar/Sidebar';
 
 import cls from './MainPage.module.scss';
