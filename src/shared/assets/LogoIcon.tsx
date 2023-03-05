@@ -19,7 +19,7 @@ export const LogoIcon: FC<ComponentPropsWithRef<'svg'>> = ({ ...props }) => (
             width="29.5"
             height="18.8904"
             rx="2.75"
-            fill="#9D56F7"
+            fill="#2c2c2c"
             stroke="white"
             strokeWidth="2.5"
         />

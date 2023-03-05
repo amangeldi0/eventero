@@ -30,10 +30,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        font-weight: 400;
     }
 
     &:hover{
-        padding: 0 35px;
+        button{
+            color: var(--active-color);
+
+        }
     }
 
     &:last-child{
