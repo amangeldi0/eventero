@@ -1,19 +1,20 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 
 import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 import { classnames } from '@/shared/helpers/classnames';
 import { SideFilters } from '@/widgets/Sidebar/ui/SideFilters';
 
-import 'react-datepicker/dist/react-datepicker.css';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
-    className?: string
+    className?: string;
+    collapsed: boolean;
+    setCollapsed: (arg: boolean) => void;
 }
 
-export const Sidebar:FC<SidebarProps> = ({ className }) => {
-    const [collapsed, setCollapsed] = useState<boolean>(false);
-
+export const Sidebar:FC<SidebarProps> = (
+    { className, setCollapsed, collapsed },
+) => {
     const age: string[] = ['21+', '18+', '16+', 'Без ограничений'];
     const audition: string[] = ['Для женшин', 'Для мужшин', 'Для всех'];
     const place: string[] = ['Ресторан', 'Бар', 'Квартира', 'ТЦ', 'Парк', 'Клуб', 'Школа', 'Колледж', 'Другое'];
@@ -29,11 +30,7 @@ export const Sidebar:FC<SidebarProps> = ({ className }) => {
         >
             <div
                 role="presentation"
-                onClick={
-                    () => setCollapsed(
-                        (prevState) => !prevState,
-                    )
-                }
+                onClick={() => setCollapsed(!collapsed)}
                 className={cls.close}
             >
                 <ChevronLeftIcon
