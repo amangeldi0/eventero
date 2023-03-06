@@ -81,7 +81,7 @@
 .error{
     font: var(--font-s);
     margin-left: 5px;
-    color: #fd7171;
+    color: var(--error-collor);
 }
 
 .button{
@@ -97,7 +97,7 @@
     justify-content: center;
     gap: 10px;
     margin-top: 30px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--fourth-color);
 
     span{
         color: var(--active-color);
@@ -107,8 +107,10 @@
 }
 
 .linkWithoutBorder {
-    @extend .link;
-
+    width: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 10px;
     gap: 0;
     margin-top: 0;

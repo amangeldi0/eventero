@@ -8,9 +8,15 @@ import {
     UserIcon,
 } from '@heroicons/react/24/outline';
 import {
-    emailSchema, nameSchema, passwordSchema, phoneSchema,
+    emailSchema,
+    nameSchema,
+    passwordSchema,
+    phoneSchema,
 } from '@/shared/constants/validations/validate';
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
+import {
+    Button,
+    ButtonTheme,
+} from '@/shared/ui/Button/Button';
 import { SingUpForm } from '@/widgets/Auth/ui/Form/Form';
 
 import cls from '../Auth.module.scss';
@@ -22,10 +28,6 @@ export interface FormDataSingUp {
     phoneNumber: number;
     password: string;
     confirmPassword: string;
-}
-
-export enum SingUP {
-
 }
 
 interface SingUpProps {

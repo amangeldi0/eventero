@@ -16,14 +16,14 @@
     padding: 4px;
 
     a{
-        color: var(--primary-color);
+        color: var(--secondary-color);
     }
 
     &::after{
         content: "";
         width:100%;
         height: 3px;
-        background-color: var(--primary-color);
+        background-color: var(--secondary-color);
         position: absolute;
         left: 0;
         bottom: 0;
@@ -42,7 +42,7 @@
     width: 36px;
     height: 36px;
     cursor: pointer;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .layout {
@@ -54,12 +54,12 @@
 .dropdown{
     width: 150px;
     flex-direction: column;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     position: absolute;
     right: 0;
     border-radius: 10px;
     display: none;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--third-color);
     z-index: 10;
     overflow: hidden;
 }
@@ -69,7 +69,7 @@
     margin-top: 5px;
 
     a{
-        color: var(--secondary-color);
+        color: var(--third-color);
         font: var(--font-m);
         font-weight: 400;
         margin-top: 7px;
@@ -86,5 +86,10 @@
 
 .LogoIcon{
     margin-top: 3px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.UserButton{
+    all: unset;
+    cursor: pointer;
 }

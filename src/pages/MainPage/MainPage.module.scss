@@ -1,5 +1,5 @@
 .mainPage{
-    background: var(--primary-color);
+    background: var(--secondary-bg-color);
     position: relative;
     width: 100%;
 }
@@ -9,11 +9,6 @@
     width: 100%;
 }
 
-.e{
-    width: calc(100% - var(--sidebar-width));
-    flex-grow: 1;
-    padding: 20px;
-}
 
 .title{
     margin-top: 30px;
@@ -25,18 +20,10 @@
     cursor: pointer;
 
     &:hover{
-        color: var(--active-color);
+        color: var(--primary-color);
     }
 }
 
-.eventsContainer{
-    display: flex;
-    flex-grow: 1;
-    min-width: 0;
-}
-
-
-.eventsLayout{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.swiper{
+    margin-top: 10px;
 }

@@ -16,7 +16,11 @@ export const Dropdown:FC<DropdownProps> = (props) => {
     return (
         <div
             className={
-                classnames(cls.Drop, {}, [className!])
+                classnames(
+                    cls.Drop,
+                    {},
+                    [className!],
+                )
             }
         >
             {children.map(
