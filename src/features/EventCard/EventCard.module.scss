@@ -4,8 +4,8 @@
     height: 350px;
     position: relative;
     overflow: hidden;
-    background-color: var(--primary-color);
-    transition: all .3s ease-out;
+    background-color: var(--secondary-bg-color);
+    transition: transform .3s ease-out;
     cursor: pointer;
 
     &:hover{
@@ -37,14 +37,14 @@
     border-radius: 50%;
 }
 
-.heart{
+.bookmarkIcon{
     height: 25px;
     width: 25px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     cursor: pointer;
 
     &:hover {
-        fill: var(--primary-color);
+        fill: var(--secondary-color);
     }
 }
 
@@ -65,7 +65,7 @@
         text-align: left;
         overflow: hidden;
         line-height: 20px;
-        color: var(--secondary-color);
+        color: var(--third-color);
         margin-left: -28px;
     }
 }
@@ -88,19 +88,20 @@
     padding: 3px 10px;
     border-radius: 5px;
     text-align: center;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     background: rgb(0 0 0 / 40%);
     cursor: pointer;
     font: var(--font-sm);
     font-weight: 600;
 
-.descriptionOverflow{
-    position: absolute;
-    width: 100%;
-    height: 25px;
-    background: linear-gradient(to top, rgb(255 255 255 / 100%) , rgb(255 255 255 / 10%));
-    bottom: 0;
-    right: 0
+    .descriptionOverflow {
+        position: absolute;
+        width: 100%;
+        height: 25px;
+        background: linear-gradient(to top, rgb(255 255 255 / 100%), rgb(255 255 255 / 10%));
+        bottom: 0;
+        right: 0
+    }
 }
 
 .addition {

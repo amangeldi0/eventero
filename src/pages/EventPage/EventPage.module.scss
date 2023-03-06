@@ -27,7 +27,7 @@
     .icon{
         width: 26px;
         height: 26px;
-        color: var(--primary-color);
+        color: var(--secondary-color);
     }
 
     .shadow{
@@ -54,11 +54,11 @@
     right: 30px;
 
     .saveIcon{
-        color: var(--primary-color);
+        color: var(--secondary-color);
         width: 60px;
         
         .saveIcon {
-            fill: white;
+            fill: var(--secondary-color);
         }
 
     }
@@ -67,7 +67,7 @@
 .info{
     position: absolute;
     z-index: 100;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     left: 30px;
     bottom: 30px;
 
@@ -110,7 +110,7 @@
 
     h2{
         margin-bottom: 15px;
-        color: black;
+        color: var(--third-color);
     }
 }
 
@@ -126,7 +126,7 @@
     img{
         width: 40px;
         height: 40px;
-        fill: var(--active-color);
+        fill: var(--primary-color);
     }
 
     .phone{
@@ -138,7 +138,7 @@
     .phoneIcon{
         width: 30px;
         height: 30px;
-        color: var(--active-color);
+        color: var(--third-color);
     }
 
     .links{
