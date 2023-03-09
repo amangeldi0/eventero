@@ -1,6 +1,6 @@
+import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 import { FC, useRef, useState } from 'react';
 
-import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 import { classnames } from '@/shared/helpers/classnames';
 import { useClickOutside } from '@/shared/hooks/useClickOutside';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';

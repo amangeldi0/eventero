@@ -1,10 +1,10 @@
-import { FC, useState } from 'react';
-import { useForm } from 'react-hook-form';
-
 import {
     LockClosedIcon,
     UserIcon,
 } from '@heroicons/react/24/outline';
+import { FC, useState } from 'react';
+import { useForm } from 'react-hook-form';
+
 import { required } from '@/shared/constants/validations/validate';
 import {
     Button,

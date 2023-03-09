@@ -1,7 +1,7 @@
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { FC } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { classnames } from '@/shared/helpers/classnames';
 import { Layout } from '@/shared/ui/Layout/Layout';
 

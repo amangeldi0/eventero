@@ -1,6 +1,6 @@
+import { BookmarkIcon, CalendarDaysIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import React from 'react';
 
-import { BookmarkIcon, CalendarDaysIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import Event from '@/shared/assets/bakr.png';
 import { classnames } from '@/shared/helpers/classnames';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
