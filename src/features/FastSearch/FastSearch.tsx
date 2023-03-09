@@ -22,13 +22,9 @@ export const FastSearch:FC = () => {
     };
 
     return (
-        <div className={cls.shadow}>
-            <Layout
-                className={cls.layout}
-            >
-                <div
-                    className={cls.MainFilter}
-                >
+        <div className={cls.container}>
+            <Layout className={cls.layout}>
+                <div className={cls.MainFilter}>
                     {mainChoices
                         .map((choice) => (
 
@@ -44,12 +40,9 @@ export const FastSearch:FC = () => {
                                 </Button>
                             </div>
                         ))}
-                    <div
-                        className={cls.MainFilterChild}
-                    >
+                    <div className={cls.MainFilterChild}>
                         <Button
-                            className={cls.AdditionalFilterChildButton}
-                            type="button"
+                            className={classnames(cls.AdditionalFilterChildButton, {}, [cls.MainFilterChildButtonAll])}
                             theme={ButtonTheme.SIMPLE}
                         >
                             ВСЕ
@@ -63,11 +56,7 @@ export const FastSearch:FC = () => {
                         >
                             <ChevronLeftIcon
                                 className={
-                                    classnames(
-                                        cls.arrowIcon,
-                                        { [cls.arrowIconActive]: active },
-                                        [],
-                                    )
+                                    classnames(cls.arrowIcon, { [cls.arrowIconActive]: active }, [])
                                 }
                             />
                         </Button>
@@ -75,11 +64,7 @@ export const FastSearch:FC = () => {
                 </div>
                 <div
                     className={
-                        classnames(
-                            cls.AdditionalFilter,
-                            { [cls.active]: active },
-                            [],
-                        )
+                        classnames(cls.AdditionalFilter, { [cls.active]: active }, [])
                     }
                 >
                     {additionalChoices
