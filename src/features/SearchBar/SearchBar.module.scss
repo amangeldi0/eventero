@@ -1,29 +1,114 @@
-.inputContainer{
+.searchBar{
     width: 500px;
-    height: 36px;
+    height: 34px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    input{
-        width: 100%;
-        height: 100%;
-        padding-left: 40px;
-        padding-right: 10px;
-        font: var(--font-sm);
-        border-radius: 7px;
-        border: none;
-        box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
-    }
 
-    input:focus{
-        outline: none;
+    @media (max-width: 1200px) {
+        position: inherit;
+        width: 34px;
+        height: 34px;
     }
 }
+
+.inputBlock {
+    width: 100%;
+    height: 100%;
+    transition: max-height .3s;
+
+    @media (max-width: 1200px) {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        background: var(--secondary-bg-color);
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        box-shadow: 0 0 18px 2px rgb(0 0 0 / 19%);
+    }
+}
+
+.inputBlockShow {
+    @media (max-width: 1200px) {
+        max-height: 70px;
+    }
+}
+
+.inputContainer {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.secondSearch{
+    display: none;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    right: 10px;
+    cursor: pointer;
+
+    @media (max-width: 1200px) {
+        display: block;
+    }
+}
+
+.input{
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 40px;
+    font: var(--font-sm);
+    border-radius: 7px;
+    border: none;
+    box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+
+
+    &:focus{
+        outline: none;
+    }
+    
+    @media (max-width: 1200px) {
+        width: 100%;
+        height: 57%;
+        box-shadow: none;
+        border: 1px solid var(--fourth-color);
+        padding: 3px 40px 3px 15px;
+    }
+
+
+}
+
+
 
 .searchIcon{
     width: 25px;
     height: 25px;
     position: absolute;
-    left: 6px;
-    top: 6px;
+    z-index: 2;
+    top: 4px;
+    right: 40px;
     color: var(--primary-color);
+    cursor: pointer;
+
+    @media (max-width: 1200px) {
+        position: inherit;
+        height: 34px;
+        width: 34px;
+        color: var(--secondary-color);
+    }
+
+    @media (max-width: 768px) {
+        width: 30px;
+        height: 30px;
+    }
 }
