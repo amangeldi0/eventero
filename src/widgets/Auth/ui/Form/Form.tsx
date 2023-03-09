@@ -50,11 +50,7 @@ export const SingUpForm:FC<SingUpProps> = (props) => {
                     type={type}
                     {...register(`${value}`, schema)}
                     className={
-                        classnames(
-                            cls.input,
-                            { [cls.lineError]: Boolean(errors[value]!) },
-                            [],
-                        )
+                        classnames(cls.input, { [cls.lineError]: Boolean(errors[value]!) }, [])
                     }
                     placeholder={placeholder}
                 />
@@ -111,11 +107,7 @@ export const SingInForm:FC<SingInProps> = (props) => {
                     type={type}
                     {...register(`${value}`, schema)}
                     className={
-                        classnames(
-                            cls.input,
-                            { [cls.lineError]: Boolean(errors[value]!) },
-                            [],
-                        )
+                        classnames(cls.input, { [cls.lineError]: Boolean(errors[value]!) }, [])
                     }
                     placeholder={placeholder}
                 />
