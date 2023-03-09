@@ -1,3 +1,4 @@
+import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import { FC, HTMLInputTypeAttribute, ReactNode } from 'react';
 import {
     FieldErrors,
@@ -5,7 +6,6 @@ import {
     UseFormRegister,
 } from 'react-hook-form';
 
-import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import { classnames } from '@/shared/helpers/classnames';
 
 import { FormDataSingIn } from '../../SingIn/SingIn';

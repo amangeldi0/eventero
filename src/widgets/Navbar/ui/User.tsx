@@ -1,9 +1,9 @@
+import { UserCircleIcon } from '@heroicons/react/24/outline';
 import {
     ComponentPropsWithRef, FC, useRef, useState,
 } from 'react';
 import { Link } from 'react-router-dom';
 
-import { UserCircleIcon } from '@heroicons/react/24/outline';
 import { Dropdown } from '@/features/Dropdown/Dropdown';
 import { classnames } from '@/shared/helpers/classnames';
 import { useClickOutside } from '@/shared/hooks/useClickOutside';

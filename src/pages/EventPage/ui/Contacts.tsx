@@ -1,6 +1,6 @@
+import { PhoneIcon } from '@heroicons/react/24/outline';
 import React from 'react';
 
-import { PhoneIcon } from '@heroicons/react/24/outline';
 import Instagram from '@/shared/assets/instagram.svg';
 import Facebook from '@/shared/assets/square-facebook.svg';
 import Telegram from '@/shared/assets/telegram.svg';

@@ -1,7 +1,7 @@
+import { BookmarkIcon } from '@heroicons/react/24/outline';
 import { MouseEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { BookmarkIcon } from '@heroicons/react/24/outline';
 import bakr from '@/shared/assets/bakr.png';
 
 import cls from './EventCard.module.scss';

@@ -1,12 +1,12 @@
-import { FC, useState } from 'react';
-import { useForm } from 'react-hook-form';
-
 import {
     AtSymbolIcon,
     LockClosedIcon,
     PhoneIcon,
     UserIcon,
 } from '@heroicons/react/24/outline';
+import { FC, useState } from 'react';
+import { useForm } from 'react-hook-form';
+
 import {
     emailSchema,
     nameSchema,
