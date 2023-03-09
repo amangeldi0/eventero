@@ -1,36 +1,51 @@
+.container{
+    box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+
+    @media (max-width: 1100px) {
+        display: none;
+    }
+}
+
 .layout{
-    width: 90%;
     height: calc((var(--navbar-height) - 20px));
-    margin:auto;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 20px;
+    align-items: center;
     position: relative;
 }
 
 .MainFilter{
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 5px;
+
+    @media (max-width: 1430px) {
+        gap: 0;
+    }
+
+    @media (max-width: 1365px) {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 .MainFilterChild{
-    padding: 0 20px;
+    padding: 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid var(--primary-color);
     transition: all .3s ease-out;
 
     &:last-child{
         border: none;
     }
 
-    &:last-child:hover{
-        padding: 0 20px;
+    @media (max-width: 1365px) {
+        padding: 0 5px;
     }
+
+
 
     .MainFilterChildButton {
         transition: all .3s ease-out;
@@ -42,6 +57,16 @@
 
         &:hover{
             color: var(--primary-color);
+        }
+
+        @media (max-width: 1250px) {
+            font: var(--font-sm);
+        }
+    }
+
+    .MainFilterChildButtonAll{
+        @media (max-width: 1250px) {
+            font: var(--font-sm);
         }
     }
 }
@@ -98,9 +123,7 @@
     display: flex;
 }
 
-.shadow{
-    box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
-}
+
 
 .arrowIcon{
     width: 20px;

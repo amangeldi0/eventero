@@ -43,6 +43,11 @@
     height: 36px;
     cursor: pointer;
     color: var(--secondary-color);
+
+    @media (max-width: 768px) {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .layout {
@@ -87,9 +92,22 @@
 .LogoIcon{
     margin-top: 3px;
     color: var(--secondary-color);
+    
+    @media (max-width: 768px) {
+        width: 180px;
+        height: 30px;
+    }
 }
 
 .UserButton{
     all: unset;
     cursor: pointer;
+}
+
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }

@@ -32,11 +32,7 @@ export const User:FC<ComponentPropsWithRef<'div'>> = () => {
             </Button>
             <Dropdown
                 className={
-                    classnames(
-                        cls.dropdown,
-                        { [cls.active]: active },
-                        [],
-                    )
+                    classnames(cls.dropdown, { [cls.active]: active }, [])
                 }
             >
                 <Link
