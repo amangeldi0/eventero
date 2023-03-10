@@ -2,6 +2,10 @@
     width: 87%;
     margin: 0 auto;
 
+    @media (max-width: 1160px) {
+        width: 89%;
+    }
+
     @media (max-width: 1000px) {
         width: 92%;
     }

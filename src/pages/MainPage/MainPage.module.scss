@@ -1,29 +1,19 @@
 .mainPage{
     background: var(--secondary-bg-color);
-    position: relative;
-    width: 100%;
 }
 
-.mainContainer{
-    display: flex;
-    width: 100%;
-}
+.layout{
+    width: 1152px;
 
-
-.title{
-    margin-top: 30px;
-    font-size: 30px;
-    margin-left: 50px;
-    margin-bottom: -5px;
-    font-weight: 600;
-    transition: color .2s ease-in-out;
-    cursor: pointer;
-
-    &:hover{
-        color: var(--primary-color);
+    @media (max-width: 1160px) {
+        width: 89%;
     }
-}
 
-.swiper{
-    margin-top: 10px;
+    @media (max-width: 1000px) {
+        width: 92%;
+    }
+
+    @media (max-width: 768px) {
+        width: 96%;
+    }
 }
