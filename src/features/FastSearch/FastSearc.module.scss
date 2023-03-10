@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    justify-content: center;
 }
 
 .MainFilter{
@@ -22,11 +23,6 @@
 
     @media (max-width: 1430px) {
         gap: 0;
-    }
-
-    @media (max-width: 1365px) {
-        justify-content: center;
-        flex-wrap: wrap;
     }
 }
 
@@ -74,15 +70,19 @@
 
 
 .AdditionalFilter{
-    width: 100%;
-    height: 15em;
+    width: 95%;
     display: none;
-    flex-flow: column wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
     position: absolute;
     background-color: var(--secondary-bg-color);
-    bottom: -16em;
+    bottom: -300px;
     z-index: 10;
+    padding: 20px;
+
+    @media (max-width: 1250px) {
+        bottom: -250px;
+    }
 }
 
 .AdditionalFilterChild{
@@ -91,6 +91,11 @@
     justify-content: center;
     flex-grow: 1;
     height: 50px;
+
+    @media (max-width: 1250px) {
+        height: 40px;
+        font-size: 15px;
+    }
 
     .AdditionalFilterButton {
         position: relative;
@@ -120,7 +125,9 @@
 
 
 .active{
-    display: flex;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 

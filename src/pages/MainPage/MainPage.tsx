@@ -1,43 +1,18 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import { EventCard } from '@/features/EventCard/EventCard';
 import { FastSearch } from '@/features/FastSearch/FastSearch';
 import { Layout } from '@/shared/ui/Layout/Layout';
+import { EventsSwiper } from '@/widgets/Events/EventsSwiper';
 
 import cls from './MainPage.module.scss';
 
 const MainPage = () => (
     <div className={cls.mainPage}>
         <FastSearch />
-        <div
-            className={cls.mainContainer}
-        >
+        <Layout className={cls.layout}>
+            <EventsSwiper title="Сегоня" />
+            <EventsSwiper title="Завтра" />
+            <EventsSwiper title="На этой неделе" />
 
-            <Layout
-                className={cls.e}
-            >
-                <div
-                    className={cls.title}
-                >
-                    В барах
-                </div>
-                <Swiper
-                    className={cls.swiper}
-                    slidesPerView={4}
-                    spaceBetween={10}
-                >
-                    <SwiperSlide><EventCard /></SwiperSlide>
-                    <SwiperSlide><EventCard /></SwiperSlide>
-                    <SwiperSlide><EventCard /></SwiperSlide>
-                    <SwiperSlide><EventCard /></SwiperSlide>
-                    <SwiperSlide><EventCard /></SwiperSlide>
-                    <SwiperSlide><EventCard /></SwiperSlide>
-                    <SwiperSlide><EventCard /></SwiperSlide>
-                    <SwiperSlide><EventCard /></SwiperSlide>
-                </Swiper>
-            </Layout>
-
-        </div>
+        </Layout>
     </div>
 );
 
