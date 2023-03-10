@@ -4,6 +4,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 768px) {
+        height: 60px;
+    }
 }
 
 .navigation{
@@ -45,8 +49,8 @@
     color: var(--secondary-color);
 
     @media (max-width: 768px) {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
     }
 }
 
@@ -94,8 +98,9 @@
     color: var(--secondary-color);
     
     @media (max-width: 768px) {
-        width: 180px;
-        height: 30px;
+        width: 150px;
+        height: 40px;
+        margin-top: 8px;
     }
 }
 

@@ -32,6 +32,10 @@
         z-index: 1;
         box-shadow: 0 0 18px 2px rgb(0 0 0 / 19%);
     }
+
+    @media (max-width: 768px) {
+        top: 60px;
+    }
 }
 
 .inputBlockShow {
@@ -108,7 +112,7 @@
     }
 
     @media (max-width: 768px) {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
     }
 }
