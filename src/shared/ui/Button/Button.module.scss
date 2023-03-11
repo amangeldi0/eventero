@@ -12,15 +12,28 @@
     }
 }
 
+.simple {
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: inherit;
+    color: inherit;
+    background: inherit;
+
+    &:hover{
+        background: inherit;
+    }
+}
+
 .clear {
     border: none;
     color: var(--active-color);
 }
 
 .contain {
-    background: var(--active-color);
-    border: 1px solid var(--active-color);
-    color: white;
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: var(--secondary-color);
 
     &:hover {
         background: rgb(41 5 194 / 83%);
@@ -29,6 +42,6 @@
 }
 
 .outline {
-    color: var(--active-color);
-    border: 1px solid var(--active-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }

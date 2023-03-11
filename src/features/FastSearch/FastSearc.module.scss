@@ -1,64 +1,88 @@
+.container{
+    box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+
+    @media (max-width: 1100px) {
+        display: none;
+    }
+}
+
 .layout{
-    width: 90%;
     height: calc((var(--navbar-height) - 20px));
-    margin:auto;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 20px;
+    align-items: center;
     position: relative;
+    justify-content: center;
 }
 
 .MainFilter{
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 5px;
+
+    @media (max-width: 1430px) {
+        gap: 0;
+    }
 }
 
 .MainFilterChild{
-    padding: 0 20px;
+    padding: 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid var(--active-color);
     transition: all .3s ease-out;
 
-    button {
+    &:last-child{
+        border: none;
+    }
+
+    @media (max-width: 1365px) {
+        padding: 0 5px;
+    }
+
+
+
+    .MainFilterChildButton {
         transition: all .3s ease-out;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: 400;
-    }
 
-    &:hover{
-        button{
-            color: var(--active-color);
+        &:hover{
+            color: var(--primary-color);
+        }
 
+        @media (max-width: 1250px) {
+            font: var(--font-sm);
         }
     }
 
-    &:last-child{
-        border: none;
-    }
-
-    &:last-child:hover{
-        padding: 0 20px;
+    .MainFilterChildButtonAll{
+        @media (max-width: 1250px) {
+            font: var(--font-sm);
+        }
     }
 }
 
+
+
 .AdditionalFilter{
-    width: 100%;
-    height: 15em;
+    width: 95%;
     display: none;
-    flex-flow: column wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
     position: absolute;
-    background-color: var(--primary-color);
-    bottom: -16em;
+    background-color: var(--secondary-bg-color);
+    bottom: -300px;
     z-index: 10;
+    padding: 20px;
+
+    @media (max-width: 1250px) {
+        bottom: -250px;
+    }
 }
 
 .AdditionalFilterChild{
@@ -68,42 +92,50 @@
     flex-grow: 1;
     height: 50px;
 
-
-    .AdditionalFilterButton{
-        position: relative;
+    @media (max-width: 1250px) {
+        height: 40px;
+        font-size: 15px;
     }
 
-    button::after{
-        content: "";
-        width: 100%;
-        height: 2px;
-        background-color: var(--active-color);
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        transform: scale(0);
-        transition: all .3s ease-out;
+    .AdditionalFilterButton {
+        position: relative;
+
+        &::after{
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: scale(0);
+            transition: all .3s ease-out;
+        }
     }
 
     &:hover{
-        button::after{
-            transform: scale(1);
+        .AdditionalFilterButton {
+            &::after{
+                transform: scale(1);
+            }
         }
     }
 }
 
+
+
 .active{
-    display: flex;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
-.shadow{
-    box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
-}
+
 
 .arrowIcon{
     width: 20px;
     height: 20px;
-    color: var(--active-color);
+    color: var(--primary-color);
     transform: rotate(90deg);
     transition: all .3s ease-out;
 }

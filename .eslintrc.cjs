@@ -32,30 +32,25 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
-        'react/jsx-props-no-spreading': 'warn',
+        'react/jsx-props-no-spreading': 'off',
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'max-len': "off",
+        '@typescript-eslint/no-non-null-assertion': 'off',
 
         'simple-import-sort/exports': 1,
         'simple-import-sort/imports': [
             1,
             {
                 groups: [
-                    // External packages.
-                    ['^'],
-                    // Internal packages.
-                    ['^@'],
-                    // Side effect imports.
-                    ['^\\u0000'],
-                    // Parent imports.
-                    ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
-                    // Other relative imports.
-                    ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
-                    // Style imports.
+                    ["^\\u0000"],
+                    ["^node:"],
+                    ["^@?\\w"],
+                    ["^"],
+                    ["^\\."],
                     ['^.+\\.s?css$']
                 ]
             }

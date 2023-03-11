@@ -1,10 +1,18 @@
+import {
+    LockClosedIcon,
+    UserIcon,
+} from '@heroicons/react/24/outline';
 import { FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { LockClosedIcon, UserIcon } from '@heroicons/react/24/outline';
 import { required } from '@/shared/constants/validations/validate';
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
-import { SingInForm } from '@/widgets/Auth/ui/Form/Form';
+import {
+    Button,
+    ButtonTheme,
+} from '@/shared/ui/Button/Button';
+import {
+    SingInForm,
+} from '@/widgets/Auth/ui/Form/Form';
 
 import cls from '../Auth.module.scss';
 
@@ -27,7 +35,7 @@ export const SingIn: FC<SingInProps> = ({ setAuthState }) => {
         handleSubmit,
     } = useForm<FormDataSingIn>({ mode: 'onBlur' });
 
-    const submitForm = (data: FormDataSingIn) => console.log(data);
+    const submitForm = (data: FormDataSingIn) => data;
 
     return (
         <form

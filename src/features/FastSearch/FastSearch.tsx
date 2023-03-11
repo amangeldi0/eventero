@@ -1,8 +1,9 @@
+import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 import { FC, useRef, useState } from 'react';
 
-import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 import { classnames } from '@/shared/helpers/classnames';
 import { useClickOutside } from '@/shared/hooks/useClickOutside';
+import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import { Layout } from '@/shared/ui/Layout/Layout';
 
 import cls from './FastSearc.module.scss';
@@ -21,77 +22,63 @@ export const FastSearch:FC = () => {
     };
 
     return (
-        <div className={cls.shadow}>
-            <Layout
-                className={cls.layout}
-            >
-                <div
-                    className={cls.MainFilter}
-                >
+        <div className={cls.container}>
+            <Layout className={cls.layout}>
+                <div className={cls.MainFilter}>
                     {mainChoices
-                        .map((choice, index) => (
+                        .map((choice) => (
 
                             <div
-                                // eslint-disable-next-line react/no-array-index-key
-                                key={index}
+                                key={choice}
                                 className={cls.MainFilterChild}
                             >
-                                <button
-                                    type="button"
+                                <Button
+                                    className={cls.MainFilterChildButton}
+                                    theme={ButtonTheme.SIMPLE}
                                 >
                                     {choice}
-                                </button>
+                                </Button>
                             </div>
                         ))}
-                    <div
-                        className={cls.MainFilterChild}
-                    >
-                        <button
-                            type="button"
+                    <div className={cls.MainFilterChild}>
+                        <Button
+                            className={classnames(cls.AdditionalFilterChildButton, {}, [cls.MainFilterChildButtonAll])}
+                            theme={ButtonTheme.SIMPLE}
                         >
                             ВСЕ
-                        </button>
+                        </Button>
                     </div>
-                    {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
                     <div className={cls.MainFilterChild} ref={ref}>
-                        <button
-                            type="button"
+                        <Button
                             onClick={handleClick}
+                            className={cls.MainFilterChildButton}
+                            theme={ButtonTheme.SIMPLE}
                         >
                             <ChevronLeftIcon
                                 className={
-                                    classnames(
-                                        cls.arrowIcon,
-                                        { [cls.arrowIconActive]: active },
-                                        [],
-                                    )
+                                    classnames(cls.arrowIcon, { [cls.arrowIconActive]: active }, [])
                                 }
                             />
-                        </button>
+                        </Button>
                     </div>
                 </div>
                 <div
                     className={
-                        classnames(
-                            cls.AdditionalFilter,
-                            { [cls.active]: active },
-                            [],
-                        )
+                        classnames(cls.AdditionalFilter, { [cls.active]: active }, [])
                     }
                 >
                     {additionalChoices
-                        .map((choice, index) => (
+                        .map((choice) => (
                             <div
-                                // eslint-disable-next-line react/no-array-index-key
-                                key={index}
+                                key={choice}
                                 className={cls.AdditionalFilterChild}
                             >
-                                <button
-                                    type="button"
+                                <Button
                                     className={cls.AdditionalFilterButton}
+                                    theme={ButtonTheme.SIMPLE}
                                 >
                                     {choice}
-                                </button>
+                                </Button>
                             </div>
                         ))}
                 </div>
