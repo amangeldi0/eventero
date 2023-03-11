@@ -10,6 +10,8 @@
 }
 
 .eventPageContainer{
+    width: 100%;
+
     @media only screen and (min-width: 1152px) and (max-width: 1920px) {
         width: 1002px;
         margin: 0 auto;
@@ -267,12 +269,15 @@
 }
 
 .galleryImage{
-    width: 320px;
-    height: 160px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center;
+}
 
-    @media only screen and (min-width: 1000px) and (max-width: 1152px) {
-        width: 400px;
-    }
+.swiperContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

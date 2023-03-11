@@ -11,12 +11,22 @@
 }
 
 .swiper{
+    margin-top: 50px;
+    
+    @media (max-width: 600px) {
+        margin-top: 25px;
+    }
+
     .swiper-wrapper {
         .swiper-slide{
-            width: 320px;
+            width: 330px;
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @media (max-width: 630px) {
+                width: 50%;
+            }
         }
     }
 }
