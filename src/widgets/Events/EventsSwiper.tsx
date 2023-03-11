@@ -3,7 +3,7 @@ import { FreeMode } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { EventCard } from '@/features/EventCard/EventCard';
-import { swiperLayout } from '@/shared/constants/swiper/swiperLayout';
+import { swiperMainBreakPoints } from '@/shared/constants/swiper/swiperLayout';
 
 import cls from './EventsSwiper.module.scss';
 
@@ -16,15 +16,13 @@ export const EventsSwiper:FC<EventsSwiperProps> = ({ title }) => {
         <div className={cls.EventsSwiper}>
             <div className={cls.EventsSwiperTitle}>{title}</div>
             <Swiper
-                slidesPerView={1.4}
                 className={cls.swiper}
-                spaceBetween={20}
                 freeMode
                 pagination={{
                     clickable: true,
                 }}
                 modules={[FreeMode]}
-                breakpoints={swiperLayout}
+                breakpoints={swiperMainBreakPoints}
             >
                 {exampleArray.map((slide) => (
                     <SwiperSlide className={cls.swiperSlide} key={slide}>

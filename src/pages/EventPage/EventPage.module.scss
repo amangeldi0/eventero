@@ -1,66 +1,129 @@
 .eventPage{
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    align-self: center;
-    justify-content: center;
     text-align: left;
     margin-top: var(--navbar-height);
+
+    @media (max-width: 1152px) {
+        margin-top: 0;
+    }
 }
 
 .eventPageContainer{
-    width: 70%;
+    @media only screen and (min-width: 1152px) and (max-width: 1920px) {
+        width: 1002px;
+        margin: 0 auto;
+    }
 }
 
-.poster{
+.poster {
     width: 100%;
     position: relative;
-    height: 70vh;
+    height: 500px;
     overflow: hidden;
     box-shadow: rgb(0 0 0 / 30%) 0 19px 38px, rgb(0 0 0 / 22%) 0 15px 12px;
+    border-radius: 6px;
 
-    h1{
-        margin: 10px 0 25px;
-        font-size: 40px;
+    @media (max-width: 1152px) {
+        border-radius: 0;
     }
 
-    .icon{
-        width: 26px;
-        height: 26px;
-        color: var(--secondary-color);
+    @media (max-width: 768px) {
+        height: 400px;
     }
 
-    .shadow{
-        height: 50%;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(to top, rgb(0 0 0 / 100%), rgb(0 0 0 / 0%));
+    @media (max-width: 425px) {
+        height: 300px;
     }
 
-    img{
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
+    @media (max-width: 375px) {
+        height: 250px;
     }
+
+
+}
+
+.EventPosterTitle {
+    margin: 10px 0 25px;
+    font-size: 30px;
+    max-width: 450px;
+    overflow: hidden;
+
+    @media (max-width: 1152px) {
+        font-size: 26px;
+        margin: 10px 0 15px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 22px;
+        margin: 10px 0;
+    }
+
+    @media (max-width: 425px) {
+        font-size: 16px;
+        margin: 5px 0;
+        max-width: 300px;
+    }
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+    color: var(--secondary-color);
+}
+
+.shadow{
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgb(0 0 0 / 100%), rgb(0 0 0 / 0%));
+
+    @media (max-width: 768px) {
+        height: 30%;
+    }
+}
+
+.posterImage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    top: 0;
+    left: 0;
 }
 
 .save{
     position: absolute;
-    z-index: 1233;
-    bottom: 30px;
+    z-index: 3;
+    bottom: 35px;
     right: 30px;
 
-    .saveIcon{
-        color: var(--secondary-color);
-        width: 60px;
-        
-        .saveIcon {
-            fill: var(--secondary-color);
-        }
+    @media (max-width: 768px) {
+        bottom: 20px;
+        right: 20px;
+    }
 
+    @media (max-width: 425px) {
+        bottom: 33px;
+    }
+}
+
+.saveIcon{
+    color: var(--secondary-color);
+    width: 35px;
+    height: 35px;
+
+    @media (max-width: 768px) {
+        width: 25px;
+        height: 25px;
+    }
+
+    @media (max-width: 425px) {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -71,26 +134,41 @@
     left: 30px;
     bottom: 30px;
 
-    .infoWithIcon{
-        display: flex;
-        align-items: center;
-
-        h4{
-            font: var(--font-m);
-            font-weight: 100;
-        }
+    @media (max-width: 768px) {
+        left: 15px;
+        bottom: 15px;
     }
 
-    .inlineText{
-        display: flex;
-        align-items: flex-end;
-        gap: 15px;
+}
 
-        p{
-            color: #aaa;
+.infoWithIcon{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+
+    h4{
+        font: var(--font-m);
+        font-weight: 100;
+
+        @media (max-width: 768px) {
+            font: var(--font-s);
         }
     }
+}
 
+.inlineText{
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+
+    p{
+        color: #aaa;
+
+        @media (max-width: 425px) {
+            font-size: 14px;
+        }
+    }
 }
 
 .map{
@@ -153,20 +231,48 @@
 }
 
 .ageLimit{
-    width: 90px;
-    height: 70px;
+    padding: 15px;
     position: absolute;
     top: 30px;
     left: 30px;
     z-index: 33;
-    border: 4px solid #cb0000;
+    border: 3px solid #cb0000;
     display: flex;
     align-items: center;
     justify-content: center;
 
+    @media (max-width: 768px) {
+        border: 2px solid #cb0000;
+        top: 15px;
+        left: 15px;
+        padding: 6px 10px;
+    }
+
+    @media (max-width: 425px) {
+        padding: 3px 8px;
+    }
+
     span {
         color: #cb0000;
-        font: var(--font-m);
-        font-size: 46px;
+        font-size: 32px;
+
+        @media (max-width: 768px) {
+            font-size: 28px;
+        }
+
+        @media (max-width: 425px) {
+            font-size: 20px;
+        }
+    }
+}
+
+.galleryImage{
+    width: 320px;
+    height: 160px;
+    object-fit: cover;
+    object-position: center;
+
+    @media only screen and (min-width: 1000px) and (max-width: 1152px) {
+        width: 400px;
     }
 }

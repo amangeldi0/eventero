@@ -17,34 +17,22 @@ export const Poster = () => (
                 className={cls.saveIcon}
             />
         </Button>
-        <div
-            className={cls.ageLimit}
-        >
+        <div className={cls.ageLimit}>
             <span>18+</span>
         </div>
-        <div
-            className={cls.info}
-        >
-            <div
-                className={cls.inlineText}
-            >
+        <div className={cls.info}>
+            <div className={cls.inlineText}>
                 <p>Концерт</p>
             </div>
-            <h1>Первый сольный концерт Bakr</h1>
-            <div
-                className={cls.mainInfo}
-            >
-                <div
-                    className={cls.infoWithIcon}
-                >
+            <div className={cls.EventPosterTitle}>Первый сольный концерт Bakr</div>
+            <div className={cls.mainInfo}>
+                <div className={cls.infoWithIcon}>
                     <CalendarDaysIcon className={cls.icon} />
                     <h4>
                         3-марта 14:30
                     </h4>
                 </div>
-                <div
-                    className={cls.infoWithIcon}
-                >
+                <div className={cls.infoWithIcon}>
                     <MapPinIcon className={classnames(cls.icon, {}, [cls.map])} id={cls.Map} />
                     <h4>
                         Ул. Киевская, 1/8
@@ -53,6 +41,7 @@ export const Poster = () => (
             </div>
         </div>
         <img
+            className={cls.posterImage}
             src={Event}
             alt="Oops"
         />
