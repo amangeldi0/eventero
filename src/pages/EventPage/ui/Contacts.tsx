@@ -1,25 +1,44 @@
-import { PhoneIcon } from '@heroicons/react/24/outline';
+import {
+    CalendarDaysIcon, EnvelopeIcon, MapPinIcon, PhoneIcon,
+} from '@heroicons/react/24/outline';
 import React from 'react';
-
-import Instagram from '@/shared/assets/instagram.svg';
-import Facebook from '@/shared/assets/square-facebook.svg';
-import Telegram from '@/shared/assets/telegram.svg';
 
 import cls from '../EventPage.module.scss';
 
 export const Contacts = () => (
-    <div className={cls.contacts}>
-        <div className={cls.phone}>
-            <PhoneIcon className={cls.phoneIcon} />
-            <p>
-                +996(704)55-03-27
-            </p>
-        </div>
+    <div className={cls.information}>
+        <h1>Lepricon Bar</h1>
+        <div className={cls.container}>
+            <div className={cls.eventInfo}>
+                <div className={cls.infoWithIcon}>
+                    <MapPinIcon className={cls.contactIcon} />
+                    <p>
+                        Ул. Киевская, 1/8
+                    </p>
+                </div>
+                <div className={cls.infoWithIcon}>
+                    <PhoneIcon className={cls.contactIcon} />
+                    <p>
+                        +996(704)-550-327
+                    </p>
+                </div>
 
-        <div className={cls.links}>
-            <img src={Instagram} alt="oops" />
-            <img src={Telegram} alt="oops" />
-            <img src={Facebook} alt="oops" />
+            </div>
+            <div className={cls.contacts}>
+                <div className={cls.infoWithIcon}>
+                    <CalendarDaysIcon className={cls.contactIcon} />
+                    <p>
+                        3-марта 14:30
+                    </p>
+                </div>
+                <div className={cls.infoWithIcon}>
+                    <EnvelopeIcon className={cls.contactIcon} />
+                    <p>
+                        lepricon@gmail.com
+                    </p>
+                </div>
+
+            </div>
         </div>
 
     </div>

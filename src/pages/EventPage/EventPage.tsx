@@ -1,7 +1,8 @@
 import React from 'react';
-import { A11y } from 'swiper';
+import { A11y, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import { Contacts } from '@/pages/EventPage/ui/Contacts';
 import { Description } from '@/pages/EventPage/ui/Description';
 
 import bakr from '../../shared/assets/bakr.png';
@@ -15,9 +16,10 @@ export const EventPage = () => (
             <Poster />
             <div className={cls.swiperContainer}>
                 <Swiper
-                    modules={[A11y]}
+                    modules={[A11y, Pagination]}
                     slidesPerView="auto"
                     spaceBetween={5}
+                    pagination={{ clickable: true }}
                 >
                     <SwiperSlide><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide>
                     <SwiperSlide><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide>
@@ -27,6 +29,7 @@ export const EventPage = () => (
                 </Swiper>
             </div>
             <div className={cls.InfoContainer}>
+                <Contacts />
                 <Description />
             </div>
         </div>
