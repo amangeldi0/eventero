@@ -1,0 +1,12 @@
+.sortDropdowns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    
+    @media (max-width: 768px) {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
