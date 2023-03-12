@@ -18,14 +18,14 @@ export const EventPage = () => (
                 <Swiper
                     modules={[A11y, Pagination]}
                     slidesPerView="auto"
+                    className={cls.gallerySwiper}
                     spaceBetween={5}
                     pagination={{ clickable: true }}
                 >
-                    <SwiperSlide><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide>
-                    {/* <SwiperSlide><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide> */}
-                    {/* <SwiperSlide><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide> */}
+                    <SwiperSlide className={cls.gallerySwiperSlide}><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide>
+                    <SwiperSlide className={cls.gallerySwiperSlide}><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide>
+                    <SwiperSlide className={cls.gallerySwiperSlide}><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide>
+                    <SwiperSlide className={cls.gallerySwiperSlide}><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide>
                 </Swiper>
             </div>
             <div className={cls.InfoContainer}>

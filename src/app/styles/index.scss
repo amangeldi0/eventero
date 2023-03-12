@@ -10,35 +10,14 @@
 
 }
 
-.swiper{
-    margin-top: 50px;
-    position: relative;
-
-    @media (max-width: 600px) {
-        margin-top: 25px;
-    }
-
-    .swiper-pagination-bullet{
-        width: 20px;
-        border-radius: 2px;
-        height: 5px;
-    }
-
-    .swiper-pagination-bullet-active{
-        background-color: #EF8A29;
-
-    }
-
-    .swiper-wrapper {
-        .swiper-slide{
-            width: 330px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @media (max-width: 630px) {
-                width: 50%;
-            }
-        }
-    }
+.swiper-pagination-bullet{
+    width: 20px;
+    border-radius: 2px;
+    height: 5px;
 }
+
+.swiper-pagination-bullet-active{
+    background-color: #EF8A29;
+
+}
+
