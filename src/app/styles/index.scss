@@ -10,13 +10,14 @@
 
 }
 
-.swiper{
-    .swiper-wrapper {
-        .swiper-slide{
-            width: 320px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
+.swiper-pagination-bullet{
+    width: 20px;
+    border-radius: 2px;
+    height: 5px;
 }
+
+.swiper-pagination-bullet-active{
+    background-color: #EF8A29;
+
+}
+
