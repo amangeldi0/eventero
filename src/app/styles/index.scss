@@ -12,9 +12,21 @@
 
 .swiper{
     margin-top: 50px;
-    
+    position: relative;
+
     @media (max-width: 600px) {
         margin-top: 25px;
+    }
+
+    .swiper-pagination-bullet{
+        width: 20px;
+        border-radius: 2px;
+        height: 5px;
+    }
+
+    .swiper-pagination-bullet-active{
+        background-color: #EF8A29;
+
     }
 
     .swiper-wrapper {

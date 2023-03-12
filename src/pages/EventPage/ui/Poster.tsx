@@ -21,7 +21,7 @@ export const Poster = () => (
             <span>18+</span>
         </div>
         <div className={cls.info}>
-            <div className={cls.inlineText}>
+            <div className={cls.categoryName}>
                 <p>Концерт</p>
             </div>
             <div className={cls.EventPosterTitle}>Первый сольный концерт Bakr</div>
