@@ -11,7 +11,7 @@ export const Poster = () => (
     <div className={cls.poster}>
         <Button
             theme={ButtonTheme.SIMPLE}
-            className={cls.save}
+            className={cls.saveButton}
         >
             <BookmarkIcon
                 className={cls.saveIcon}
@@ -20,23 +20,23 @@ export const Poster = () => (
         <div className={cls.ageLimit}>
             <span>18+</span>
         </div>
-        <div className={cls.info}>
-            <div className={cls.categoryName}>
+        <div className={cls.posterInformation}>
+            <div className={cls.posterCategoryName}>
                 <p>Концерт</p>
             </div>
-            <div className={cls.EventPosterTitle}>Первый сольный концерт Bakr</div>
-            <div className={cls.mainInfo}>
-                <div className={cls.infoWithIcon}>
+            <div className={cls.posterTitle}>Первый сольный концерт Bakr</div>
+            <div className={cls.posterDetails}>
+                <div className={cls.textWithIcon}>
                     <CalendarDaysIcon className={cls.icon} />
-                    <h4>
+                    <p>
                         3-марта 14:30
-                    </h4>
+                    </p>
                 </div>
-                <div className={cls.infoWithIcon}>
+                <div className={cls.textWithIcon}>
                     <MapPinIcon className={classnames(cls.icon, {}, [cls.map])} id={cls.Map} />
-                    <h4>
+                    <p>
                         Ул. Киевская, 1/8
-                    </h4>
+                    </p>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@ export const Poster = () => (
             alt="Oops"
         />
         <div
-            className={cls.shadow}
+            className={cls.posterShadow}
         />
     </div>
 );

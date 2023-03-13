@@ -10,14 +10,27 @@
 
 }
 
-.swiper-pagination-bullet{
-    width: 20px;
-    border-radius: 2px;
-    height: 5px;
-}
+.swiper{
+    margin-top: 50px;
+    position: relative;
 
-.swiper-pagination-bullet-active{
-    background-color: #EF8A29;
+    @media (max-width: 600px) {
+        margin-top: 25px;
+    }
 
-}
+    @media (max-width: 450px) {
+        .swiper-pagination{
+            margin-bottom: -10px;
+        }
+    }
 
+    .swiper-pagination-bullet{
+        width: 20px;
+        border-radius: 2px;
+        height: 5px;
+    }
+
+    .swiper-pagination-bullet-active{
+        background-color: var(--active-color);
+
+    }
