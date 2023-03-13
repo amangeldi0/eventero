@@ -162,7 +162,7 @@
     }
 
     span {
-        color: #cb0000;
+        color: var(--red-color);
         font-size: 32px;
 
         @media (max-width: 768px) {
@@ -195,7 +195,7 @@
     display: flex;
     align-items: flex-end;
     gap: 15px;
-    color: #aaa;
+    color: var(--component-bg-color);
 
     @media (max-width: 425px) {
         font-size: 14px;
@@ -237,7 +237,7 @@
 
     h2{
         margin-bottom: 15px;
-        color: var(--third-color);
+        color: var(--primary-color);
     }
 }
 
