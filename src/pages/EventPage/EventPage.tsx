@@ -19,12 +19,11 @@ export const EventPage = () => (
                 slidesPerView="auto"
                 spaceBetween={5}
                 pagination={{ clickable: true }}
+                className={cls.gallerySwiper}
             >
-                <SwiperSlide><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide>
-                <SwiperSlide><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide>
-                <SwiperSlide><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide>
-                {/* <SwiperSlide><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide> */}
-                {/* <SwiperSlide><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide> */}
+                <SwiperSlide className={cls.gallerySwiperSlide}><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide>
+                <SwiperSlide className={cls.gallerySwiperSlide}><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide>
+                <SwiperSlide className={cls.gallerySwiperSlide}><img className={cls.galleryImage} src={bakr} alt="" /></SwiperSlide>
             </Swiper>
         </div>
         <div className={cls.InfoContainer}>
