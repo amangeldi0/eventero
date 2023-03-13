@@ -8,19 +8,22 @@
     cursor: pointer;
     border-radius: 4px;
 
-    &:hover{
-        transform: translateY(-10px);
-        box-shadow: rgb(50 50 93 / 25%) 0 6px 12px -2px, rgb(0 0 0 / 30%) 0 3px 7px -3px;
+    @media (min-width: 768px) {
+        &:hover{
+            transform: translateY(-10px);
+            box-shadow: rgb(50 50 93 / 25%) 0 6px 12px -2px, rgb(0 0 0 / 30%) 0 3px 7px -3px;
+        }
     }
 
+    
     @media (max-width: 480px) {
         width: 98%;
         height: 300px;
     }
 
-    @media (max-width: 420px) {
-        width: 98%;
-        height: 240px;
+    @media (max-width: 400px) {
+        width: 320px;
+        height: 245px;
     }
 
 }
@@ -86,7 +89,6 @@
 
     @media (max-width: 480px) {
         padding: 5px;
-        gap: 2px;
     }
 }
 
@@ -120,12 +122,9 @@
     line-height: 15px;
     color: var(--component-color);
 
-    @media (max-width: 420px) {
-        height: 35px;
-    }
 }
 
-.price {
+.price{
     position: absolute;
     bottom: 15px;
     left: 15px;
@@ -137,7 +136,6 @@
     cursor: pointer;
     font: var(--font-sm);
     font-weight: 600;
-
 
     @media (max-width: 420px) {
         font: var(--font-s);
