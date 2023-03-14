@@ -2,7 +2,7 @@
     // typography
     --font-family-main: 'Poppins', sans-serif;
     --font-size-s: 12px;
-    --font-line-s: 20px;
+    --font-line-s: 16px;
     --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
     --font-size-sm: 14px;
     --font-line-sm: 22px;
@@ -16,6 +16,9 @@
     --font-size-xl: 20px;
     --font-line-xl: 28px;
     --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+    --font-size-2xl: 26px;
+    --font-line-2xl: 34px;
+    --font-2xl: var(--font-size-2xl) / var(--font-line-2xl) var(--font-family-main);
 
     // sizes
     --navbar-height: 80px;
