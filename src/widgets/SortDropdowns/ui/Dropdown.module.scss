@@ -5,31 +5,31 @@
     justify-content: space-between;
     gap: 5px;
     cursor: pointer;
-    background: transparent;
-    padding: 3px 7px;
-    max-width: 250px;
+    background: var(--light-bg-color);
+    box-shadow: rgb(0 0 0 / 2%) 0 1px 3px 0, rgb(27 31 35 / 15%) 0 0 0 1px;
+    padding: 4px 8px;
+    max-width: 200px;
     min-width: 120px;
     border-radius: 4px;
-    border: 1px solid var(--primary-color);
-}
 
-.dropdownContainerPrimary{
-    background: var(--primary-color);
+
 }
 
 .title{
     color: var(--primary-color);
     overflow: hidden;
     font: var(--font-sm);
+
 }
 
 .titlePrimary{
-    color: var(--secondary-color);
+    color: var(--active-color);
 }
 
 .dropdown{
-    background: var(--primary-bg-color);
-    width: auto;
+    background: var(--light-bg-color);
+    box-shadow: rgb(0 0 0 / 2%) 0 1px 3px 0, rgb(27 31 35 / 15%) 0 0 0 1px;
+    min-width: 100%;
     position: absolute;
     top: 40px;
     left: 0;
@@ -43,30 +43,29 @@
 }
 
 .clearIcon{
-    height: 20px;
-    width: 20px;
+    height: 17px;
+    width: 17px;
     color: var(--primary-color);
 }
 
 .clearPrimary{
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .dropIcon{
     height: 13px;
     width: 13px;
     color: var(--primary-color);
-    transform: rotate(90deg);
     transition: transform .3s;
 }
 
 .dropdownItem{
     padding: 10px 15px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font: var(--font-sm);
 
     &:hover{
-        background: #47474A;
+        background: var(--alternative-bg-color);
     }
 }
 
@@ -75,5 +74,5 @@
 }
 
 .rotate{
-    transform: rotate(-90deg);
+    transform: rotate(-180deg);
 }
