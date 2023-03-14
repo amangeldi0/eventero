@@ -18,7 +18,6 @@
     width: 100%;
     position: relative;
     height: 500px;
-    overflow: hidden;
     box-shadow: rgb(0 0 0 / 30%) 0 19px 38px, rgb(0 0 0 / 22%) 0 15px 12px;
     border-radius: 6px;
 
@@ -37,8 +36,6 @@
     @media (max-width: 375px) {
         height: 200px;
     }
-
-
 }
 
 .posterTitle {
@@ -64,7 +61,7 @@
     }
 }
 
-.icon{
+.whiteIcon{
     width: 20px;
     height: 20px;
     color: var(--secondary-color);
@@ -83,21 +80,12 @@
     }
 }
 
-.posterImage{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    top: 0;
-    left: 0;
-}
-
 .saveButton{
     position: absolute;
-    z-index: 3;
+    z-index: 1;
     bottom: 35px;
     right: 30px;
+    background: transparent;
 
     @media (max-width: 768px) {
         bottom: 20px;
@@ -127,10 +115,9 @@
         left: 15px;
         bottom: 15px;
     }
-
 }
 
-.posterDetails{
+.eventDetails{
     display: flex;
     gap: 15px;
 
@@ -142,36 +129,22 @@
 .ageLimit{
     padding: 15px;
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 5%;
+    left: 3%;
     z-index: 33;
-    border: 3px solid #cb0000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 3px solid var(--red-color);
+    color: var(--red-color);
+    font-size: 32px;
 
     @media (max-width: 768px) {
-        border: 2px solid #cb0000;
-        top: 15px;
-        left: 15px;
+        border: 2px solid var(--red-color);
         padding: 6px 10px;
+        font-size: 28px;
     }
 
     @media (max-width: 425px) {
         padding: 3px 8px;
-    }
-
-    span {
-        color: var(--red-color);
-        font-size: 32px;
-
-        @media (max-width: 768px) {
-            font-size: 28px;
-        }
-
-        @media (max-width: 425px) {
-            font-size: 20px;
-        }
+        font-size: 20px;
     }
 }
 
@@ -206,18 +179,17 @@
     }
 }
 
-.map{
-    margin-left: -2px;
-}
-
 .InfoContainer {
     margin: 25px auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-start;
-    gap: 30px;
+    gap: 40px;
     max-width: 1002px;
+
+    @media(max-width: 550px){
+        gap: 20px;
+    }
 
     @media(max-width: 1125px){
         padding: 15px;
@@ -227,7 +199,12 @@
 .description{
     color: #545454;
     flex-grow: 1;
-    margin: 0 auto;
+    margin: 0 auto 30px;
+
+    h2{
+        margin-bottom: 15px;
+        color: var(--primary-color);
+    }
 
     @media(max-width: 600px){
         margin-top: 15px;
@@ -240,173 +217,151 @@
             font-size: 14px;
         }
     }
-
-    h2{
-        margin-bottom: 15px;
-        color: var(--primary-color);
-    }
 }
 
 .organizationCard{
     border-radius: 4px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
     background: var(--alternative-bg-color);
     width: 100%;
     padding: 10px 15px;
 
     @media(max-width: 600px){
         padding: 0;
-        box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
-        flex-direction: column;
         background: var(--light-bg-color);
+        box-shadow: rgb(0 0 0 / 5%) 0 3px 15px 0, rgb(0 0 0 / 8%) 0 0 0 1px;
+    }
+}
+
+.organizationProfile{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+
+    @media(max-width: 600px){
+        padding: 10px 15px;
+        background: var(--alternative-bg-color);
+    }
+}
+
+.organizationImage{
+    height: 67px;
+    width: 67px;
+    border-radius: 4px;
+
+    @media (max-width: 600px) {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+.organizationInfo{
+    h1{
+        font: var(--font-xl);
+        font-weight: 600;
+
+        @media(max-width: 660px){
+            font: var(--font-m);
+            font-weight: 600;
+        }
     }
 
-    .organizationVisit{
-        font: var(--font-sm);
-        color: var(--active-color);
-        border-radius: 4px;
-        font-weight: 400;
-        transition: all .3s ease-in;
-        position: relative;
-        cursor: pointer;
+    p{
+        color: var(--component-color);
+        font: var(--font-s);
 
-        @media(max-width: 600px){
+        @media(max-width: 660px){
             font: var(--font-s);
         }
-
-        &::after{
-            content: "";
-            width: 100%;
-            height: 1px;
-            background: var(--active-color);
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            transition: .1s all ease-in;
-        }
-    }
-
-    .organizationProfile{
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        flex-grow: 1;
-        width: 100%;
-
-        @media(max-width: 600px){
-            padding: 10px 15px;
-            background: var(--alternative-bg-color);
-        }
-
-        .organizationImage{
-            height: 67px;
-            width: 67px;
-            border-radius: 4px;
-            overflow: hidden;
-
-            @media (max-width: 600px) {
-                height: 60px;
-                width: 60px;
-            }
-
-            img{
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-            }
-        }
-
-        .organizationInfo{
-            display: flex;
-            flex-direction: column;
-
-            h1{
-                font: var(--font-xl);
-                font-weight: 600;
-
-                @media(max-width: 660px){
-                    font: var(--font-m);
-                    font-weight: 600;
-                }
-            }
-
-            p{
-                color: var(--component-color);
-                font: var(--font-s);
-
-                @media(max-width: 660px){
-                    font: var(--font-s);
-                }
-            }
-
-            span{
-                color: var(--active-color);
-            }
-
-            .organizationContacts{
-                display: flex;
-                gap: 10px;
-
-                @media(max-width: 470px){
-                    flex-direction: column;
-                    gap: 0;
-                }
-            }
-        }
-    }
-
-    .eventInfo{
-        display: none;
-        align-items:flex-start;
-        flex-direction: column;
-        flex-grow: 1;
-        width: 100%;
-
-        @media(max-width: 600px){
-            display: flex;
-            padding: 20px 15px;
-        }
-    }
-
-    .eventIcon{
-        width: 20px;
-        height: 20px;
-        color: var(--active-color);
     }
 }
 
-.galleryImage{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
+.organizationLink{
+    font: var(--font-sm);
+    color: var(--active-color);
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: underline;
+
+    @media(max-width: 600px){
+        font: var(--font-s);
+    }
 }
 
-.swiperContainer{
-    width: 100%;
+.organizationContacts{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 10px;
+
+    @media(max-width: 470px){
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.eventInfo{
+    display: none;
+    align-items:flex-start;
+    flex-direction: column;
+
+    @media(max-width: 600px){
+        display: flex;
+        padding: 20px 15px;
+    }
 }
 
 .gallerySwiper{
-    margin-top: 50px;
+    margin-top: 30px;
     position: relative;
+    width: 100%;
+    max-width: 1002px;
 
     @media (max-width: 600px) {
-        margin-top: 25px;
+        margin-top: 0;
     }
 }
 
 .gallerySwiperSlide{
     width: 330px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 180px;
 
     @media (max-width: 630px) {
         width: 50%;
+        height: 150px;
     }
+
+    @media (max-width: 500px) {
+        height: 130px;
+    }
+
+    @media (max-width: 450px) {
+        height: 115px;
+    }
+
+    @media (max-width: 375px) {
+        height: 100px;
+    }
+}
+
+.galleryImage{
+    width: 100%;
+    height: 100%;
+}
+
+.activeColorIcon{
+    width: 20px;
+    height: 20px;
+    color: var(--active-color);
+}
+
+.iFrame{
+    border: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.video {
+    width: 100%;
+    position: relative;
+    padding-bottom: 50%;
 }

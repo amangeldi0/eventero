@@ -5,11 +5,12 @@ import React from 'react';
 
 import Event from '@/shared/assets/bakr.png';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
+import { ImageContainer } from '@/shared/ui/ImageContainer/ImageContainer';
 
 import cls from '@/pages/EventPage/EventPage.module.scss';
 
 export const Poster = () => (
-    <div className={cls.poster}>
+    <ImageContainer img={Event} className={cls.poster}>
         <Button
             theme={ButtonTheme.SIMPLE}
             className={cls.saveButton}
@@ -19,41 +20,36 @@ export const Poster = () => (
             />
         </Button>
         <div className={cls.ageLimit}>
-            <span>18+</span>
+            18+
         </div>
         <div className={cls.posterInformation}>
             <div className={cls.posterCategoryName}>
                 <p>Концерт</p>
             </div>
             <div className={cls.posterTitle}>Первый сольный концерт Bakr</div>
-            <div className={cls.posterDetails}>
+            <div className={cls.eventDetails}>
                 <div className={cls.textWithIcon}>
-                    <BanknotesIcon className={cls.icon} />
+                    <BanknotesIcon className={cls.whiteIcon} />
                     <p>
                         1500$
                     </p>
                 </div>
                 <div className={cls.textWithIcon}>
-                    <CalendarDaysIcon className={cls.icon} />
+                    <CalendarDaysIcon className={cls.whiteIcon} />
                     <p>
                         3-марта 14:30
                     </p>
                 </div>
                 <div className={cls.textWithIcon}>
-                    <MapPinIcon className={cls.icon} />
+                    <MapPinIcon className={cls.whiteIcon} />
                     <p>
                         Ул. Киевская, 1/8
                     </p>
                 </div>
             </div>
         </div>
-        <img
-            className={cls.posterImage}
-            src={Event}
-            alt="Oops"
-        />
         <div
             className={cls.posterShadow}
         />
-    </div>
+    </ImageContainer>
 );
