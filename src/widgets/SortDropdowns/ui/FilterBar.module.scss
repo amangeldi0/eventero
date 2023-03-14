@@ -1,0 +1,64 @@
+.filterBar{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.head{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title{
+    font: var(--font-xl);
+    font-weight: 600;
+
+    @media (max-width: 375px) {
+        font: var(--font-l);
+        font-weight: 600;
+    }
+}
+
+.clear{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font: var(--font-sm);
+    margin-top: 5px;
+    color: gray;
+}
+
+.xMarkIcon {
+    width: 17px;
+    height: 17px;
+}
+
+.filters{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter{
+    padding: 4px 13px;
+    border-radius: 20px;
+    background: var(--light-bg-color);
+    box-shadow: rgb(0 0 0 / 2%) 0 1px 3px 0, rgb(27 31 35 / 15%) 0 0 0 1px;
+    color: var(--primary-color);
+    font: var(--font-sm);
+    transition: background-color .3s;
+  
+    @media (max-width: 375px) {
+        font: var(--font-s);
+    }
+}
+
+.activeFilter {
+    background: var(--active-color);
+    color: var(--secondary-color);
+}
