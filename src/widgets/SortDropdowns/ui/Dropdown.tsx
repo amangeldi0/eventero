@@ -1,5 +1,4 @@
-import { XMarkIcon } from '@heroicons/react/24/outline';
-import { PlayIcon } from '@heroicons/react/24/solid';
+import { ChevronDownIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import {
     FC, MouseEvent, useRef, useState,
 } from 'react';
@@ -44,7 +43,7 @@ export const Dropdown: FC<DropdownProps> = (props) => {
             </div>
             {select === title
                 ? (
-                    <PlayIcon
+                    <ChevronDownIcon
                         className={classnames(cls.dropIcon, { [cls.rotate]: showSelect })}
                     />
                 )
