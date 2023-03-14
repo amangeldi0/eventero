@@ -6,7 +6,7 @@
 
     @media only screen and (min-width: 1152px) and (max-width: 1920px) {
         width: 1002px;
-        margin: 0 auto;
+        margin: var(--navbar-height) auto;
     }
 
     @media (max-width: 1152px) {
@@ -134,7 +134,7 @@
     display: flex;
     gap: 15px;
 
-    @media (max-width: 560px) {
+    @media (max-width: 600px) {
         display: none;
     }
 }
@@ -178,8 +178,12 @@
 .textWithIcon{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
+
+    p{
+        font: var(--font-sm);
+    }
 
     h4{
         font: var(--font-m);
@@ -207,11 +211,17 @@
 }
 
 .InfoContainer {
-    margin: 50px 0;
+    margin: 25px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 30px;
+    max-width: 1002px;
+
+    @media(max-width: 1125px){
+        padding: 25px;
+    }
 }
 
 .description{
@@ -219,11 +229,7 @@
     flex-grow: 1;
     margin: 0 auto;
 
-    @media(max-width: 1151px){
-        width: 90%;
-    }
-
-    @media(max-width: 560px){
+    @media(max-width: 600px){
         margin-top: 15px;
 
         h2{
@@ -241,105 +247,120 @@
     }
 }
 
-.detailsContainer{
-    box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
-    width: 100%;
-    border: 1px solid #717070;
+.organizationCard{
     border-radius: 4px;
-    height: 200px;
-    margin: auto;
-    padding: 25px;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: var(--alternative-bg-color);
+    width: 100%;
+    padding: 10px 15px;
 
-    h1{
-        margin-bottom: 25px;
+    @media(max-width: 600px){
+        padding: 0;
+        box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+        flex-direction: column;
+        background: var(--light-bg-color);
     }
 
-    .detailsLayout{
+    .organizationVisit{
+        font: var(--font-sm);
+        color: var(--active-color);
+        border-radius: 4px;
+        font-weight: 400;
+        transition: all .3s ease-in;
+        position: relative;
+        cursor: pointer;
+
+        &::after{
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: var(--active-color);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: .1s all ease-in;
+        }
+    }
+
+    .organizationProfile{
         display: flex;
-        gap: 150px;
+        gap: 20px;
+        align-items: center;
+        flex-grow: 1;
+        width: 100%;
+
+        @media(max-width: 600px){
+            padding: 10px 15px;
+            background: var(--alternative-bg-color);
+        }
+
+        .organizationImage{
+            height: 67px;
+            width: 67px;
+            border-radius: 4px;
+            overflow: hidden;
+
+            img{
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .organizationInfo{
+            display: flex;
+            flex-direction: column;
+
+            h1{
+                font: var(--font-xl);
+                font-weight: 600;
+
+                @media(max-width: 660px){
+                    font: var(--font-l);
+                    font-weight: 600;
+                }
+            }
+
+            p{
+                color: var(--component-color);
+                font: var(--font-s);
+
+                @media(max-width: 660px){
+                    font: var(--font-s);
+                }
+            }
+
+            span{
+                color: var(--active-color);
+            }
+
+            .organizationContacts{
+                display: flex;
+                gap: 10px;
+            }
+        }
     }
 
-    .contactIcon{
+    .eventInfo{
+        display: none;
+        align-items:flex-start;
+        flex-direction: column;
+        flex-grow: 1;
+        width: 100%;
+
+        @media(max-width: 600px){
+            display: flex;
+            padding: 20px 15px;
+        }
+    }
+
+    .eventIcon{
         width: 20px;
         height: 20px;
-        color: #EF8A29;
+        color: var(--active-color);
     }
-
-    .eventDetails{
-        width: 100%;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        display: none;
-        
-        @media (max-width: 560px) {
-            display: flex;
-        }
-    }
-
-    .contactDetails{
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-evenly;
-    }
-
-    @media(max-width: 1151px){
-        width: 90%;
-    }
-
-    @media(max-width: 670px){
-        p{
-            font-size: 14px;
-        }
-
-        .detailsLayout{
-            gap: 50px;
-        }
-    }
-
-    @media(max-width: 560px){
-        height: 150px;
-        padding: 5px;
-
-        h1{
-            font-size: 22px;
-            margin: 0;
-        }
-
-        p{
-            font-size: 12px;
-        }
-
-        .detailsLayout{
-            gap: 0;
-            flex-direction: column;
-        }
-    }
-
-    @media(max-width: 425px){
-        height: 150px;
-        gap: 3px;
-        padding: 5px;
-        justify-content: space-evenly;
-
-        h1{
-            font-size: 22px;
-            margin: 0;
-        }
-
-        p{
-            font-size: 10px;
-        }
-
-        .detailsLayout{
-            gap: 0;
-        }
-    }
-
 }
 
 .galleryImage{
